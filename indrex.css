@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Podcast — Mi identidad afro</title>
+        <!-- Fuente: Poppins para títulos y Inter para texto -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+        <style>
+            :root{
+                --bg:#fbfbfd;
+                --card:#ffffff;
+                --accent:#6a1b9a; /* lila */
+                --accent-2:#1565c0; /* azul */
+                --muted:#6b7280;
+                --text:#111827;
+                --radius:12px;
+                --shadow: 0 6px 18px rgba(16,24,40,0.08);
+            }
+
+            /* Reset sencillo */
+            *{box-sizing:border-box}
+            body{
+                margin:0;
+                font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+                background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+                color:var(--text);
+                -webkit-font-smoothing:antialiased;
+                -moz-osx-font-smoothing:grayscale;
+            }
+
+            /* Contenedor centrado */
+            .container{
+                max-width:980px;
+                margin:36px auto;
+                padding:20px;
+            }
+
+            header.hero{
+                background: linear-gradient(135deg, rgba(106,27,154,0.9), rgba(21,101,192,0.9));
+                color:white;
+                padding:28px;
+                border-radius:16px;
+                box-shadow:var(--shadow);
+            }
+            header .subtitle{opacity:0.95; margin-top:8px; font-size:15px}
+
+            /* Tarjeta para lista de temas */
+            .temas{
+                margin-top:20px;
+                display:grid;
+                grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+                gap:16px;
+            }
+            .tema-card{
+                background:var(--card);
+                padding:16px;
+                border-radius:var(--radius);
+                box-shadow:var(--shadow);
+                border:1px solid rgba(15,23,42,0.04);
+            }
+            .tema-card h3{margin:0 0 8px 0; font-family:'Poppins',sans-serif; color:var(--accent)}
+            .tema-card p{margin:0; color:var(--muted); font-size:14px}
+
+            /* Imagen hero/responsive */
+            .hero-img{display:block; width:100%; max-width:420px; height:auto; border-radius:10px; margin-top:14px; box-shadow:0 8px 26px rgba(0,0,0,0.12)}
+
+            /* Clases utilitarias (colores de texto) */
+            .texto-rojo{color:#c62828}
+            .texto-azul{color:var(--accent-2)}
+            .texto-lila{color:var(--accent)}
+
+            /* Tamaños de imagen utilitarias */
+            .img-pequena{width:120px;height:auto}
+            .img-mediana{width:300px;max-width:100%;height:auto}
+            .img-grande{width:640px;max-width:100%;height:auto}
+
+            /* Boton sencillo */
+            .btn{
+                display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600;font-family:'Poppins',sans-serif
+            }
+
+            footer{margin-top:28px;color:var(--muted);font-size:14px}
+
+            @media (max-width:560px){
+                .container{padding:12px}
+                header.hero{padding:18px}
+            }
+            /* Estilos para vídeo responsivo */
+            .video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;box-shadow:var(--shadow);background:#000}
+            .video-container iframe,.video-container video{position:absolute;top:0;left:0;width:100%;height:100%}
+            .video-caption{margin-top:8px;color:var(--muted);font-size:13px}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="hero">
+                <h1 style="margin:0;font-family:'Poppins',sans-serif;">Podcast: Mi identidad afro</h1>
+                <p class="subtitle">Reflexiones, entrevistas y relatos que celebran la memoria, la cultura y el territorio.</p>
+            </header>
+
+            <main>
+                <!-- Sección de temas: cada tema es una 'card' para mejor presentación -->
+                <section style="margin-top:20px;">
+                    <h2 style="margin-bottom:12px;">Temas principales</h2>
+                    <div class="temas">
+                        <article class="tema-card">
+                            <h3>Identidad</h3>
+                            <p>¿Se considera usted afro? ¿Por qué? Historias personales y rasgos culturales que definen la identidad.</p>
+                            <p>la identidad afrocolombiana es muy importante ya que nos permite reconocer nuestras raices y constumbres que nos han sido heredadas por nuestros antepasados.</p>
+                            <p>si me considero afro,vivo rodeada de personas afrocolombianas, comparto sus raises, conocimientos y constumbres.</p>
+                            <img class="hero-img"src="https://tse3.mm.bing.net/th/id/OIP.ePY-5DegQMqICClNfqidLQHaEc?pid=Api&P=0&h=180.jpg" alt="Personas afrocolombianas celebrando su cultura">
+                            <p>mi historia comienza desde que naci en un lugar llamado buenaventura, rodeada de personas afrocolombianas, desde pequeña me enseñaron a valorar y respetar nuestras constumbres, como la musica, la gastronomia y las festividades tradicionales. crecí escuchando historias de mis abuelos sobre sus experiencias y luchas, lo que me hizo sentir orgullosa de mi identidad afrocolombiana. a lo largo de mi vida, he participado en eventos culturales y comunitarios que celebran nuestra herencia, fortaleciendo mi sentido de pertenencia y orgullo por ser parte de esta rica cultura.</p>
+                        </article>
+
+                        <article class="tema-card">
+                            <h3>Ancestralidad</h3>
+                            <p>Transmisión de costumbres y saberes — la memoria que conecta generaciones.</p>
+                            <p>la gastronomia es una constumbre muy reconocia al igual que,las ceremonias,danzas y los cantos, tambien nos heredaron las festividades como el chigualo y el andariele</p>
+                            <img class="hero-img"src="https://www.cultura10.org/wp-content/uploads/2023/06/ef1dae1e-30b8-4d79-97cc-4d8deffd30e5.jpg" alt="Platos tipicos afrocolombianos">
+                            <p>reconosco y honro la lucha de mis antepasados para obtener la libertad que se les fue negada</p>
+                        </article>
+
+                        <article class="tema-card">
+                            <h3>Territorio</h3>
+                            <p>La importancia del territorio para la identidad y la resistencia cultural .</p>
+                            <p>el territorio es muy importante ya que fue un lugar en el cual nuestros antepasados forjaron sus recuerdos y tambien por la lucha que ellos enfrentaron y olvidar nuestro territorio es como olvidar nuestros recuerdos.</p>
+                            <img class="hero-img"src="https://tse2.mm.bing.net/th/id/OIP.EYPMXpR8X3bB7dmY9CMIDAHaEc?pid=Api&P=0&h=180.jpg" alt="Paisaje de territorio afrocolombiano">
+                            <p>valoro y protejo mi territorio como un espacio sagrado que alberga nuestra historia, cultura y sueños para las futuras generaciones.</p>
+                        </article>
+
+                        <article class="tema-card">
+                            <h3>Ley 70</h3>
+                            <p>Contexto y significado de la Ley 70 para las comunidades afrocolombianas.</p>
+                            <p>la ley 70, es la que nos reconoce nuestro territorio ancestral, de donde viene nuestras constumbres</p>
+                            <img class="hero-img"src="https://tse4.mm.bing.net/th/id/OIP.ygqo_kVyi8mrmgTiMJPzgwHaE8?pid=Api&P=0&h=180.jpg" alt="Comunidad afrocolombiana reunida">
+                            <p>entiendo la ley 70 como un pilar fundamental para la protección de nuestros derechos territoriales y culturales, que fortalece nuestra identidad y autonomía como pueblo afrocolombiano.</p>
+                        </article>
+                    </div>
+
+                <!-- Imagen y ejemplo de botones -->
+                <section style="margin-top:22px;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:260px">
+                        <h2 class="texto-lila">Imagen representativa</h2>
+                        <img class="hero-img" src="https://tse4.mm.bing.net/th/id/OIP.OdwommhOlbMPrPe7G3M9owHaE6?pid=Api&P=0&h=180.jpg" alt="Mujer afrocolombiana" />
+                        <img class="hero-img" src="https://tse4.mm.bing.net/th/id/OIP.gHe3pmN4wsKY655Px75N2gHaEz?pid=Api&P=0&h=180.jpeg" alt="afrocolombianas celebrando su cultura"/>
+                        <iframe width="420" height="315" src="iframe width=" 560 height="315" src="https://www.youtube-nocookie.com/embed/4DFI7_exS-0?si=sAb71QKeJa-zxHni&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+                    </div>
+                </section> 
+                    <div style="width:240px">
+                        <h2 style="margin-top:0">Acciones</h2>
+                        <a class="btn" href="#">Escuchar episodio</a>
+                        <div style="height:12px"></div>
+                        <p style="color:var(--muted)">
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+            </footer>
+        </div>
+    </body>
+</html>
+
+
+
+
+
